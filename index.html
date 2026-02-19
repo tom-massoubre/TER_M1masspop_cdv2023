@@ -84,17 +84,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <section id="travail-encadré-de-recherche" class="level1">
-<h1><span class="smallcaps">Travail Encadré de Recherche</span><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Invisible_square.png" width="75" height="35"><img src="https://amubox.univ-amu.fr/apps/files_sharing/publicpreview/8pBjj3zeM94iX47?file=/1.H.5.a.%20FS/%C3%89cran/Logo_FS_couleur_RVB.png&amp;fileId=1604330007&amp;x=1920&amp;y=1080&amp;a=true&amp;etag=8fd815f78b362f1920c8333dfa924f19" class="img-fluid" width="188"></h1>
-<p>serieux</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span><span class="sc">+</span><span class="dv">64</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 73</code></pre>
-</div>
-</div>
+<h1><span class="smallcaps">Travail Encadré de Recherche</span><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Invisible_square.png" width="75" height="29"><img src="https://amubox.univ-amu.fr/apps/files_sharing/publicpreview/8pBjj3zeM94iX47?file=/1.H.5.a.%20FS/%C3%89cran/Logo_FS_couleur_RVB.png&amp;fileId=1604330007&amp;x=1920&amp;y=1080&amp;a=true&amp;etag=8fd815f78b362f1920c8333dfa924f19" class="img-fluid" width="188"></h1>
 <section id="m1-masspop---amu---20252026" class="level2">
 <h2 class="anchored" data-anchor-id="m1-masspop---amu---20252026"><span class="smallcaps">M1 MASSPOP - amU - 2025/2026</span></h2>
 <section id="youenn-loric-tom-massoubre-nasser-olleik" class="level5">
@@ -104,29 +94,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h5 class="anchored" data-anchor-id="encadré-par-m.-clément-de-belsunce"><em>Encadré par M. Clément DE BELSUNCE</em></h5>
 </section>
 </section>
-<section id="effets-de-la-migration-rurale-urbaine-contrainte-par-lentrée-dans-lenseignement-supérieure-sur-la-santé-mentale-des-étudiants." class="level2">
-<h2 class="anchored" data-anchor-id="effets-de-la-migration-rurale-urbaine-contrainte-par-lentrée-dans-lenseignement-supérieure-sur-la-santé-mentale-des-étudiants."><span class="smallcaps">Effets de la migration rurale-urbaine contrainte par l’entrée dans l’enseignement supérieure sur la santé mentale des étudiants.</span></h2>
+<section id="lexode-rurale-imposé-par-lacces-à-lenseignement-supérieur-une-contrainte-qui-affecte-la-santé-mentale-des-étudiants" class="level2">
+<h2 class="anchored" data-anchor-id="lexode-rurale-imposé-par-lacces-à-lenseignement-supérieur-une-contrainte-qui-affecte-la-santé-mentale-des-étudiants"><span class="smallcaps">L’exode rurale imposé par l’acces à l’enseignement supérieur : une contrainte qui affecte la santé mentale des étudiants</span></h2>
 <p>Données issues de l’enquête <em>Conditions de vie des étudiants 2023</em>, produite par l’Observatoire national de la vie étudiante (OVE).</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Première importation des données</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/Tom MASSOUBRE/OneDrive/Bureau/Master MASSPOP/Semestre 2/TER/Données/lil-1727-Donnees_CSV"</span>)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>cdv <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"cdv2023.csv"</span>, <span class="at">sep =</span> <span class="st">";"</span>)</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(cdv[,<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>],<span class="dv">10</span>), <span class="at">format =</span> <span class="st">"html"</span>, <span class="at">caption =</span> <span class="st">"Aperçu : Les 9 premières modalités des 10 premiers individus de la base de données"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Première importation des données</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/Tom MASSOUBRE/OneDrive/Bureau/Master MASSPOP/Semestre 2/TER/Données/lil-1727-Donnees_CSV"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>cdv <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"cdv2023.csv"</span>, <span class="at">sep =</span> <span class="st">";"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(cdv[,<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>],<span class="dv">10</span>), <span class="at">format =</span> <span class="st">"html"</span>, <span class="at">caption =</span> <span class="st">"Aperçu : les 9 premières variables des 10 premiers individus de la base de données"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
-<caption>Aperçu : Les 9 premières modalités des 10 premiers individus de la base de données</caption>
+<caption>Aperçu : les 9 premières variables des 10 premiers individus de la base de données</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">identifiant</th>
@@ -258,37 +248,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(cdv)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(cdv)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 49523</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(cdv)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(cdv)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 935</code></pre>
 </div>
 </div>
-<p>La base de données contient 49 523 lignes correspondants aux <strong>49 523 répondants</strong> à l’enquête. Le base de données contient 935 colonnes correspondants aux 935 modalités possibles des <strong>218 variables</strong> qu’elle contient. Des variables peuvent prendre plusieurs modalités et sont donc démultipliées en colonne dans la base.</p>
+<section id="présentation-de-lenquête-et-description-des-données" class="level4">
+<h4 class="anchored" data-anchor-id="présentation-de-lenquête-et-description-des-données"><span class="smallcaps">Présentation de l’enquête et description des données :</span></h4>
+<p>La base de données contient 49 523 lignes correspondants aux <strong>49 523 répondants</strong> à l’enquête. Le base de données contient 935 colonnes correspondants aux 935 variables. Certaines questions sont à choix multiples (exemple : la nationalité de naissance, il est possible d’avoir plusieurs nationalités), dans ce cas la la questions est démultiplié en plusieurs variables (nationalité1, nationalité2…).</p>
+</section>
+<section id="questions-de-départ-et-hypothèses" class="level4">
+<h4 class="anchored" data-anchor-id="questions-de-départ-et-hypothèses"><span class="smallcaps">Questions de départ et hypothèses:</span></h4>
+<p>Une récente étude de l’<em>Institut Mondor de recherche Biomédicale</em> et de l’<em>Institut National de la Santé Et de la Recherche Médicale</em> révèle que vivre en milieu urbain triple le risque de développer une maladie mentale et soulignent un lien préoccupant entre réchauffement climatique, pollution atmosphérique et aggravation des troubles psychiatriques. Ce constat nous a conduit à nous questionner sur la crise de la santé mentale en cours chez les jeunes et la contrainte qu’ont de nombreux étudiants ruraux à devoir quitter leurs milieu d’origine pour pouvoir accéder à l’enseignement supérieur. Nous avons ainsi formuler trois questions de départ :</p>
+<ul>
+<li><p>Les étudiants contraints à partir loin de là où ils ont grandi sont davantage sujet aux troubles de la santé mentale.</p></li>
+<li><p>Le changement brutal entre milieu rurale et milieu urbain a t-il des répercussions sur la santé mentale des étudiants ?</p></li>
+<li><p>Les personnes grandissant en ville, qui n’ont pas besoin de déménager pour leurs études, sont elles moins sujet aux troubles de la santé mentale ?</p></li>
+</ul>
+<p>33% de la population française vie en zone rurale et se voit contraint de devoir tout changer pour accéder aux études supérieures : changer de cadre de vie, de milieu, s’éloigner de ses proches peut etre extremement stressant et perturbant lorsque l’on n’a jamais vu autre chose que sa campagne.</p>
+<p>Nous pouvons alors définir trois hypothèses :</p>
+<ul>
+<li><p>H1 : Les étudiants d’origine rurales sont davantage sujets aux troubles de la santé mentale.</p></li>
+<li><p>H2 :</p></li>
+</ul>
+</section>
+<section id="description-des-concepts" class="level4">
+<h4 class="anchored" data-anchor-id="description-des-concepts"><span class="smallcaps">Description des concepts :</span></h4>
+<p>Notre travail va se pencher principalement sur deux grands concepts :</p>
+<ul>
+<li><p><strong>Les troubles psychiques</strong> definit comme étant un état durant lequel un individu est dans l’incapacité de s’adapter aux situations difficiles voire, douloureuses et de maintenir son équilibre psychique.</p></li>
+<li><p><strong>L’exode rurale</strong> définit comme toute migration d’une zone rurale vers une zone urbaine.</p></li>
+</ul>
+</section>
 <section id="sélection-des-variables---cdvi" class="level4">
-<h4 class="anchored" data-anchor-id="sélection-des-variables---cdvi">Sélection des variables - CDVI</h4>
-<p>Ciblé par année d’études après le bac ? Qui répond à la question des troubles ?</p>
-<p>Il y a un tronc commun (variable reconstruite pour les besoins de l’analyse)</p>
-<p>Comprendre la structure de l’enquête</p>
-<p>Voir pour les -99, NC, -999. Est ce que ca signifie quelque chose ou c’est juste comme une non reponse ?</p>
-<p><strong>Question de départ :</strong></p>
-<p>Est ce que les étudiants qui doivent partir loin de là où ils ont grandi sont plus sujet aux troubles de santé mentale.<br>
-Est ce que le changement brutal de la vie dans une petite ville à une grande ville a des répercussions sur la santé mentale des étudiants ?</p>
-<p>Est ce que les personnes qui grandissent en ville, qui n’ont pas besoin de déménager pour leurs études, sont moins sujet aux troubles de la santé mentale ?</p>
-<p>Grandir en ville nous exposent à de plein grand risques de développer un trouble de la santé mentale (ref littérature), mais on peut penser que devoir tout changer pour partir faire des études, de changer de cadre de vie de milieu etc peut etre extremement stressant et perturbant quand on a jamais vu autre chose que sa campagne.</p>
-<p>variable ?</p>
-<p>taille ville etablissement antérieur</p>
-<p>taille ville etablissement première année d’inscription dans l’enseignement supérieur</p>
-<p>Densité (urbaine/rural) de la ville du logement de étudiant</p>
-<p>Densité (urbaine/rural) de la ville obtention du bac ou équivalence</p>
-<p>Il existe des variables sur les troubles, anxieux, dépressif… Sur la consommation d’alcool, de cigarette, sur le sentiment de solitude, sur la difficulté à s’intégrer qui peuvent être interressante pour notre recherche.</p>
+<h4 class="anchored" data-anchor-id="sélection-des-variables---cdvi"><span class="smallcaps">Sélection des variables - CDVI</span></h4>
+<p><img src="CDVI.png" class="img-fluid"></p>
 </section>
 </section>
 </section>
