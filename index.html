@@ -94,168 +94,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h5 class="anchored" data-anchor-id="encadré-par-m.-clément-de-belsunce"><em>Encadré par M. Clément DE BELSUNCE</em></h5>
 </section>
 </section>
-<section id="lexode-rurale-imposé-par-lacces-à-lenseignement-supérieur-une-contrainte-qui-affecte-la-santé-mentale-des-étudiants" class="level2">
-<h2 class="anchored" data-anchor-id="lexode-rurale-imposé-par-lacces-à-lenseignement-supérieur-une-contrainte-qui-affecte-la-santé-mentale-des-étudiants"><span class="smallcaps">L’exode rurale imposé par l’acces à l’enseignement supérieur : une contrainte qui affecte la santé mentale des étudiants</span></h2>
+<section id="lexode-rural-imposé-par-laccès-à-lenseignement-supérieur-une-contrainte-qui-affecte-la-santé-mentale-des-étudiants" class="level2">
+<h2 class="anchored" data-anchor-id="lexode-rural-imposé-par-laccès-à-lenseignement-supérieur-une-contrainte-qui-affecte-la-santé-mentale-des-étudiants"><span class="smallcaps">L’exode rural imposé par l’accès à l’enseignement supérieur : une contrainte qui affecte la santé mentale des étudiants</span></h2>
 <p>Données issues de l’enquête <em>Conditions de vie des étudiants 2023</em>, produite par l’Observatoire national de la vie étudiante (OVE).</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Première importation des données</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/Tom MASSOUBRE/OneDrive/Bureau/Master MASSPOP/Semestre 2/TER/Données/lil-1727-Donnees_CSV"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>cdv <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"cdv2023.csv"</span>, <span class="at">sep =</span> <span class="st">";"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Première importation des données</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/Tom MASSOUBRE/OneDrive/Bureau/Master MASSPOP/Semestre 2/TER/Données/lil-1727-Donnees_CSV"</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>cdv <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"cdv2023.csv"</span>, <span class="at">sep =</span> <span class="st">";"</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(cdv[,<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>],<span class="dv">10</span>), <span class="at">format =</span> <span class="st">"html"</span>, <span class="at">caption =</span> <span class="st">"Aperçu : les 9 premières variables des 10 premiers individus de la base de données"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<caption>Aperçu : les 9 premières variables des 10 premiers individus de la base de données</caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">identifiant</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Sexe</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Sexe2</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Nais_etu_annee</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Natio_etu1</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Natio_etu2</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Natio_naiss1</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Natio_naiss2</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Natio_naiss3</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">T000008</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">1993</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">78</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">T000010</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">1999</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">60</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">T000018</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">2000</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">T000020</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">2002</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">T000030</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">2000</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">T000034</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">1983</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">74</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">T000040</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">2003</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">T000049</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">1997</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">T000060</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">1999</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">T000073</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">2003</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">176</td>
-<td style="text-align: right;">74</td>
-<td style="text-align: right;">NA</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(cdv)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(cdv)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 49523</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(cdv)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(cdv)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 935</code></pre>
@@ -267,7 +131,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="questions-de-départ-et-hypothèses" class="level4">
 <h4 class="anchored" data-anchor-id="questions-de-départ-et-hypothèses"><span class="smallcaps">Questions de départ et hypothèses:</span></h4>
-<p>Une récente étude de l’<em>Institut Mondor de recherche Biomédicale</em> et de l’<em>Institut National de la Santé Et de la Recherche Médicale</em> révèle que vivre en milieu urbain triple le risque de développer une maladie mentale et soulignent un lien préoccupant entre réchauffement climatique, pollution atmosphérique et aggravation des troubles psychiatriques. Ce constat nous a conduit à nous questionner sur la crise de la santé mentale en cours chez les jeunes et la contrainte qu’ont de nombreux étudiants ruraux à devoir quitter leurs milieu d’origine pour pouvoir accéder à l’enseignement supérieur. Nous avons ainsi formuler trois questions de départ :</p>
+<p>Une récente étude de l’<em>Institut Mondor de recherche Biomédicale</em> et de l’<em>Institut National de la Santé Et de la Recherche Médicale</em> révèle que vivre en milieu urbain triple le risque de développer une maladie mentale et soulignent un lien préoccupant entre réchauffement climatique, pollution atmosphérique et aggravation des troubles psychiatriques. [<a href="https://lareleveetlapeste.fr/les-gens-vivant-en-ville-ont-3-fois-plus-de-risques-de-developper-une-maladie-psychiatrique/">La relève et la peste</a>] Ce constat nous a conduit à nous questionner sur la crise de la santé mentale en cours chez les jeunes et la contrainte qu’ont de nombreux étudiants ruraux à devoir quitter leurs milieu d’origine pour pouvoir accéder à l’enseignement supérieur. Nous avons ainsi formuler trois questions de départ :</p>
 <ul>
 <li><p>Les étudiants contraints à partir loin de là où ils ont grandi sont davantage sujet aux troubles de la santé mentale.</p></li>
 <li><p>Le changement brutal entre milieu rurale et milieu urbain a t-il des répercussions sur la santé mentale des étudiants ?</p></li>
@@ -285,12 +149,720 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Notre travail va se pencher principalement sur deux grands concepts :</p>
 <ul>
 <li><p><strong>Les troubles psychiques</strong> definit comme étant un état durant lequel un individu est dans l’incapacité de s’adapter aux situations difficiles voire, douloureuses et de maintenir son équilibre psychique.</p></li>
-<li><p><strong>L’exode rurale</strong> définit comme toute migration d’une zone rurale vers une zone urbaine.</p></li>
+<li><p><strong>L’exode rural</strong> définit comme toute migration d’une zone rurale vers une zone urbaine.</p></li>
 </ul>
 </section>
 <section id="sélection-des-variables---cdvi" class="level4">
 <h4 class="anchored" data-anchor-id="sélection-des-variables---cdvi"><span class="smallcaps">Sélection des variables - CDVI</span></h4>
 <p><img src="CDVI.png" class="img-fluid"></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Construction de notre base de données </span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>tercdv <span class="ot">&lt;-</span> cdv[,<span class="fu">c</span>(<span class="st">"identifiant"</span>, <span class="st">"poids"</span>, <span class="st">"sexe_HF"</span>, <span class="st">"age"</span>, <span class="st">"AGE_TRANCHES"</span>, <span class="st">"Nais_etu_annee"</span>, <span class="st">"cycle_etud1"</span>, <span class="st">"discipline"</span>, <span class="st">"activite_rem1"</span>, <span class="st">"ETUDE_PERE"</span>, <span class="st">"ETUDE_MERE"</span>, <span class="st">"pcs_menage"</span>, <span class="st">"Date_bac2"</span>, <span class="st">"B2_2"</span>, <span class="st">"E19_2"</span>,<span class="st">"E22_2a"</span>, <span class="st">"E22_2b"</span>, <span class="st">"E22_2c"</span>, <span class="st">"E22_2d"</span>, <span class="st">"E22_2e"</span>, <span class="st">"E23"</span>, <span class="st">"E14"</span>, <span class="st">"E5_1"</span>, <span class="st">"E7"</span>, <span class="st">"E17_2"</span>, <span class="st">"E17_3"</span>, <span class="st">"E17_4"</span>, <span class="st">"E16_1"</span>, <span class="st">"E16_2"</span>, <span class="st">"E16_3"</span>, <span class="st">"E16_4"</span>, <span class="st">"E16_5"</span>, <span class="st">"E16_6"</span>, <span class="st">"D62_2"</span>, <span class="st">"E3"</span>, <span class="st">"ville_etab"</span>, <span class="st">"ci_etab"</span>, <span class="st">"C22"</span>, <span class="st">"taille_ville_etab_Ant1"</span>, <span class="st">"taille_ville_etab_Ant2"</span>, <span class="st">"taille_ville_etab_Ant3"</span>, <span class="st">"taille_ville_etab_Ant4"</span>, <span class="st">"taille_ville_etab_preminscr"</span>, <span class="st">"densite_log_etu"</span>, <span class="st">"densite_lieu_bac"</span>, <span class="st">"densite_log_mere"</span>, <span class="st">"densite_log_pere"</span>, <span class="st">"C35"</span>, <span class="st">"D5"</span>, <span class="st">"D4"</span>)]</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>E19_2 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>E19_2, </span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Non"</span>, <span class="st">"Oui"</span>))</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>E22_2a <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>E22_2a, </span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Non"</span>, <span class="st">"Oui"</span>))</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>E22_2b <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>E22_2b, </span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Non"</span>, <span class="st">"Oui"</span>))</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>E22_2c <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>E22_2c, </span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Non"</span>, <span class="st">"Oui"</span>))</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>E22_2d <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>E22_2d, </span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Non"</span>, <span class="st">"Oui"</span>))</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>E22_2e <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>E22_2e, </span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Non"</span>, <span class="st">"Oui"</span>))</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>E23 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>E23, </span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Pas un obstacle du tout"</span>,<span class="st">"2"</span>,<span class="st">"3"</span>,<span class="st">"4"</span>, <span class="st">"Gros obstacle"</span>))</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>E5_1 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>E5_1, </span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>),</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Tous les jours"</span>, <span class="st">"Au moins une fois par semaine"</span>, <span class="st">"Moins souvent"</span>, <span class="st">"Je ne fume pas"</span>))</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>E7 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>E7, </span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>),</span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Tous les jours"</span>, <span class="st">"Au moins une fois par semaine"</span>, <span class="st">"Moins souvent"</span>, <span class="st">"Je ne fume pas"</span>))</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>E17_2 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>E17_2, </span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Tout le temps"</span>, <span class="st">"Souvent"</span>, <span class="st">"Quelques fois"</span>, <span class="st">"Rarement"</span>, <span class="st">"Jamais"</span>))</span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>E17_3 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>E17_3, </span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Tout le temps"</span>, <span class="st">"Souvent"</span>, <span class="st">"Quelques fois"</span>, <span class="st">"Rarement"</span>, <span class="st">"Jamais"</span>))</span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>E16_1 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>E16_1, </span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"En permanence"</span>, <span class="st">"Souvent"</span>, <span class="st">"Quelques fois"</span>, <span class="st">"Rarement"</span>, <span class="st">"Jamais"</span>))</span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>E16_2 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>E16_2, </span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"En permanence"</span>, <span class="st">"Souvent"</span>, <span class="st">"Quelques fois"</span>, <span class="st">"Rarement"</span>, <span class="st">"Jamais"</span>))</span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>E16_3 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>E16_3, </span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"En permanence"</span>, <span class="st">"Souvent"</span>, <span class="st">"Quelques fois"</span>, <span class="st">"Rarement"</span>, <span class="st">"Jamais"</span>))</span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>E16_4 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>E16_4, </span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"En permanence"</span>, <span class="st">"Souvent"</span>, <span class="st">"Quelques fois"</span>, <span class="st">"Rarement"</span>, <span class="st">"Jamais"</span>))</span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>E16_5 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>E16_5, </span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"En permanence"</span>, <span class="st">"Souvent"</span>, <span class="st">"Quelques fois"</span>, <span class="st">"Rarement"</span>, <span class="st">"Jamais"</span>))</span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>E16_6 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>E16_6, </span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"En permanence"</span>, <span class="st">"Souvent"</span>, <span class="st">"Quelques fois"</span>, <span class="st">"Rarement"</span>, <span class="st">"Jamais"</span>))</span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>D62_2 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>D62_2, </span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Non"</span>, <span class="st">"Oui"</span>))</span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>E3 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>E3, </span>
+<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Très mauvais"</span>, <span class="st">"Mauvais"</span>, <span class="st">"Moyen"</span>, <span class="st">"Bon"</span>, <span class="st">"Très bon"</span>))</span>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>ville_etab <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>ville_etab, </span>
+<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="sc">-</span><span class="dv">99</span>,</span>
+<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="st">"Etranger"</span>)</span>
+<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>C22 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>C22, </span>
+<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>),</span>
+<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Chez mes deux parents ou tuteurs"</span>, <span class="st">"Chez ma mère ou tutrice"</span>, <span class="st">"Chez mon père ou tuteur"</span>, <span class="st">"Dans un logement indépendant"</span>, <span class="st">"En résidence collective"</span>, <span class="st">"Je n'ai pas de logement"</span>, <span class="st">"Autre situation"</span>))</span>
+<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>taille_ville_etab_Ant1 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>taille_ville_etab_Ant1, </span>
+<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">999</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>),</span>
+<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Etranger"</span>,<span class="st">"Paris"</span>, <span class="st">"Région parisienne : Petite Couronne"</span>, <span class="st">"Région parisienne : Grande Couronne"</span>, <span class="st">"Communes de plus de 300 000 habitants"</span>, <span class="st">"Communes de 200 001 à 300 000 habitants"</span>, <span class="st">"Communes de 100 000 à 200 000 habitants"</span>, <span class="st">"Communes de moins de 100 000 habitants"</span>))</span>
+<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>taille_ville_etab_Ant2 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>taille_ville_etab_Ant2, </span>
+<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">999</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>),</span>
+<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Etranger"</span>,<span class="st">"Paris"</span>, <span class="st">"Région parisienne : Petite Couronne"</span>, <span class="st">"Région parisienne : Grande Couronne"</span>, <span class="st">"Communes de plus de 300 000 habitants"</span>, <span class="st">"Communes de 200 001 à 300 000 habitants"</span>, <span class="st">"Communes de 100 000 à 200 000 habitants"</span>, <span class="st">"Communes de moins de 100 000 habitants"</span>))</span>
+<span id="cb6-96"><a href="#cb6-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-97"><a href="#cb6-97" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>taille_ville_etab_Ant3 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>taille_ville_etab_Ant3, </span>
+<span id="cb6-98"><a href="#cb6-98" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">999</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>),</span>
+<span id="cb6-99"><a href="#cb6-99" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Etranger"</span>,<span class="st">"Paris"</span>, <span class="st">"Région parisienne : Petite Couronne"</span>, <span class="st">"Région parisienne : Grande Couronne"</span>, <span class="st">"Communes de plus de 300 000 habitants"</span>, <span class="st">"Communes de 200 001 à 300 000 habitants"</span>, <span class="st">"Communes de 100 000 à 200 000 habitants"</span>, <span class="st">"Communes de moins de 100 000 habitants"</span>))</span>
+<span id="cb6-100"><a href="#cb6-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-101"><a href="#cb6-101" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>taille_ville_etab_Ant4 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>taille_ville_etab_Ant4, </span>
+<span id="cb6-102"><a href="#cb6-102" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">999</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>),</span>
+<span id="cb6-103"><a href="#cb6-103" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Etranger"</span>,<span class="st">"Paris"</span>, <span class="st">"Région parisienne : Petite Couronne"</span>, <span class="st">"Région parisienne : Grande Couronne"</span>, <span class="st">"Communes de plus de 300 000 habitants"</span>, <span class="st">"Communes de 200 001 à 300 000 habitants"</span>, <span class="st">"Communes de 100 000 à 200 000 habitants"</span>, <span class="st">"Communes de moins de 100 000 habitants"</span>))</span>
+<span id="cb6-104"><a href="#cb6-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-105"><a href="#cb6-105" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>taille_ville_etab_preminscr <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>taille_ville_etab_preminscr, </span>
+<span id="cb6-106"><a href="#cb6-106" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">999</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>),</span>
+<span id="cb6-107"><a href="#cb6-107" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Etranger"</span>,<span class="st">"Paris"</span>, <span class="st">"Région parisienne : Petite Couronne"</span>, <span class="st">"Région parisienne : Grande Couronne"</span>, <span class="st">"Communes de plus de 300 000 habitants"</span>, <span class="st">"Communes de 200 001 à 300 000 habitants"</span>, <span class="st">"Communes de 100 000 à 200 000 habitants"</span>, <span class="st">"Communes de moins de 100 000 habitants"</span>))</span>
+<span id="cb6-108"><a href="#cb6-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-109"><a href="#cb6-109" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>densite_log_etu <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>densite_log_etu, </span>
+<span id="cb6-110"><a href="#cb6-110" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>),</span>
+<span id="cb6-111"><a href="#cb6-111" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Rurale éloignée très peu dense"</span>, <span class="st">"Rurale éloignée peu dense"</span>, <span class="st">"Rurale périphérique très peu dense"</span>, <span class="st">"Rurale périphérique peu dense"</span>, <span class="st">"Urbaine - Bourg"</span>, <span class="st">"Urbaine - Petite ville"</span>, <span class="st">"Urbaine périphérique peu dense"</span>, <span class="st">"Urbaine dense"</span>, <span class="st">"Urbaine très dense"</span>))</span>
+<span id="cb6-112"><a href="#cb6-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-113"><a href="#cb6-113" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>densite_lieu_bac <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>densite_lieu_bac, </span>
+<span id="cb6-114"><a href="#cb6-114" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>),</span>
+<span id="cb6-115"><a href="#cb6-115" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Rurale éloignée très peu dense"</span>, <span class="st">"Rurale éloignée peu dense"</span>, <span class="st">"Rurale périphérique très peu dense"</span>, <span class="st">"Rurale périphérique peu dense"</span>, <span class="st">"Urbaine - Bourg"</span>, <span class="st">"Urbaine - Petite ville"</span>, <span class="st">"Urbaine périphérique peu dense"</span>, <span class="st">"Urbaine dense"</span>, <span class="st">"Urbaine très dense"</span>))</span>
+<span id="cb6-116"><a href="#cb6-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-117"><a href="#cb6-117" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>densite_log_mere <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>densite_log_mere, </span>
+<span id="cb6-118"><a href="#cb6-118" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>),</span>
+<span id="cb6-119"><a href="#cb6-119" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Rurale éloignée très peu dense"</span>, <span class="st">"Rurale éloignée peu dense"</span>, <span class="st">"Rurale périphérique très peu dense"</span>, <span class="st">"Rurale périphérique peu dense"</span>, <span class="st">"Urbaine - Bourg"</span>, <span class="st">"Urbaine - Petite ville"</span>, <span class="st">"Urbaine périphérique peu dense"</span>, <span class="st">"Urbaine dense"</span>, <span class="st">"Urbaine très dense"</span>))</span>
+<span id="cb6-120"><a href="#cb6-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-121"><a href="#cb6-121" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>densite_log_pere <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>densite_log_pere, </span>
+<span id="cb6-122"><a href="#cb6-122" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>),</span>
+<span id="cb6-123"><a href="#cb6-123" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Rurale éloignée très peu dense"</span>, <span class="st">"Rurale éloignée peu dense"</span>, <span class="st">"Rurale périphérique très peu dense"</span>, <span class="st">"Rurale périphérique peu dense"</span>, <span class="st">"Urbaine - Bourg"</span>, <span class="st">"Urbaine - Petite ville"</span>, <span class="st">"Urbaine périphérique peu dense"</span>, <span class="st">"Urbaine dense"</span>, <span class="st">"Urbaine très dense"</span>))</span>
+<span id="cb6-124"><a href="#cb6-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-125"><a href="#cb6-125" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>C35 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>C35, </span>
+<span id="cb6-126"><a href="#cb6-126" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb6-127"><a href="#cb6-127" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Pas du tout satisfait(e)"</span>, <span class="st">"Peu satisfait(e)"</span>, <span class="st">"Neutre"</span>, <span class="st">"Satisfait(e)"</span>, <span class="st">"Tout à fait satisfait(e)"</span>))</span>
+<span id="cb6-128"><a href="#cb6-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-129"><a href="#cb6-129" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>D5 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>D5, </span>
+<span id="cb6-130"><a href="#cb6-130" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
+<span id="cb6-131"><a href="#cb6-131" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Oui"</span>, <span class="st">"Non, elle m'a été supprimée ou refusée"</span>, <span class="st">"Non, je n'en ai pas demandé / je ne suis pas éligible"</span>))</span>
+<span id="cb6-132"><a href="#cb6-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-133"><a href="#cb6-133" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>D4 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>D4, </span>
+<span id="cb6-134"><a href="#cb6-134" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb6-135"><a href="#cb6-135" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Très importantes"</span>, <span class="st">"Importantes"</span>, <span class="st">"Moyennement importantes"</span>, <span class="st">"Peu de difficulté"</span>, <span class="st">"Aucune difficulté"</span>))</span>
+<span id="cb6-136"><a href="#cb6-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-137"><a href="#cb6-137" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>sexe_HF <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>sexe_HF, </span>
+<span id="cb6-138"><a href="#cb6-138" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>),</span>
+<span id="cb6-139"><a href="#cb6-139" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Un homme"</span>, <span class="st">"Une femme"</span>))</span>
+<span id="cb6-140"><a href="#cb6-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-141"><a href="#cb6-141" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>AGE_TRANCHES <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>AGE_TRANCHES, </span>
+<span id="cb6-142"><a href="#cb6-142" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">17</span>, <span class="dv">18</span>, <span class="dv">19</span>, <span class="dv">20</span>, <span class="dv">21</span>, <span class="dv">22</span>, <span class="dv">23</span>, <span class="dv">24</span>, <span class="dv">25</span>, <span class="dv">26</span>, <span class="dv">27</span>),</span>
+<span id="cb6-143"><a href="#cb6-143" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Moins de 18 ans"</span>, <span class="st">"18 ans"</span>, <span class="st">"19 ans"</span>, <span class="st">"20 ans"</span>, <span class="st">"21 ans"</span>, <span class="st">"22 ans"</span>, <span class="st">"23 ans"</span>, <span class="st">"24 ans"</span>, <span class="st">"25 ans"</span>, <span class="st">"26 ans"</span>, <span class="st">"Plus de 26 ans"</span>))</span>
+<span id="cb6-144"><a href="#cb6-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-145"><a href="#cb6-145" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>cycle_etud1 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>cycle_etud1, </span>
+<span id="cb6-146"><a href="#cb6-146" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb6-147"><a href="#cb6-147" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Cycle 0"</span>, <span class="st">"Cycle 1, 1ère inscription"</span>, <span class="st">"Cycle 1, hors 1ère inscription"</span>, <span class="st">"Cycle 2"</span>, <span class="st">"Cycle 3"</span>))</span>
+<span id="cb6-148"><a href="#cb6-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-149"><a href="#cb6-149" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>discipline <span class="ot">&lt;-</span> <span class="fu">factor</span>(</span>
+<span id="cb6-150"><a href="#cb6-150" aria-hidden="true" tabindex="-1"></a>  tercdv<span class="sc">$</span>discipline,</span>
+<span id="cb6-151"><a href="#cb6-151" aria-hidden="true" tabindex="-1"></a>  <span class="at">levels =</span> <span class="fu">as.character</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">206</span>),</span>
+<span id="cb6-152"><a href="#cb6-152" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(</span>
+<span id="cb6-153"><a href="#cb6-153" aria-hidden="true" tabindex="-1"></a>    <span class="st">"AGRO-ALIMENTAIRE"</span>,</span>
+<span id="cb6-154"><a href="#cb6-154" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ACOUSTIQUE"</span>,</span>
+<span id="cb6-155"><a href="#cb6-155" aria-hidden="true" tabindex="-1"></a>    <span class="st">"BASE SCIENTIFIQUE DOUBLE COMPETENCE"</span>,</span>
+<span id="cb6-156"><a href="#cb6-156" aria-hidden="true" tabindex="-1"></a>    <span class="st">"BIOCHIMIE"</span>,</span>
+<span id="cb6-157"><a href="#cb6-157" aria-hidden="true" tabindex="-1"></a>    <span class="st">"BIOLOGIE"</span>,</span>
+<span id="cb6-158"><a href="#cb6-158" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CHIMIE"</span>,</span>
+<span id="cb6-159"><a href="#cb6-159" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ELECTRONIQUE, ELECTROTECHNIQUE ET AUTOMATIQUE (EEA)"</span>,</span>
+<span id="cb6-160"><a href="#cb6-160" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ENERGIE, ÉNERGÉTIQUE"</span>,</span>
+<span id="cb6-161"><a href="#cb6-161" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GÉNIE CIVIL"</span>,</span>
+<span id="cb6-162"><a href="#cb6-162" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GEOLOGIE"</span>,</span>
+<span id="cb6-163"><a href="#cb6-163" aria-hidden="true" tabindex="-1"></a>    <span class="st">"INFORMATIQUE"</span>,</span>
+<span id="cb6-164"><a href="#cb6-164" aria-hidden="true" tabindex="-1"></a>    <span class="st">"INGENIEUR"</span>,</span>
+<span id="cb6-165"><a href="#cb6-165" aria-hidden="true" tabindex="-1"></a>    <span class="st">"MATHEMATIQUES"</span>,</span>
+<span id="cb6-166"><a href="#cb6-166" aria-hidden="true" tabindex="-1"></a>    <span class="st">"MATHEMATIQUES APPLIQUEES"</span>,</span>
+<span id="cb6-167"><a href="#cb6-167" aria-hidden="true" tabindex="-1"></a>    <span class="st">"MATHEMATIQUES APPLIQUÉES ET SCIENCES SOCIALES (MASS)"</span>,</span>
+<span id="cb6-168"><a href="#cb6-168" aria-hidden="true" tabindex="-1"></a>    <span class="st">"MATHEMATIQUES FONDAMENTALES"</span>,</span>
+<span id="cb6-169"><a href="#cb6-169" aria-hidden="true" tabindex="-1"></a>    <span class="st">"MATHS PHYSIQUES"</span>,</span>
+<span id="cb6-170"><a href="#cb6-170" aria-hidden="true" tabindex="-1"></a>    <span class="st">"MECANIQUE"</span>,</span>
+<span id="cb6-171"><a href="#cb6-171" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PHYSIOLOGIE ANIMALE"</span>,</span>
+<span id="cb6-172"><a href="#cb6-172" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PHYSIQUE"</span>,</span>
+<span id="cb6-173"><a href="#cb6-173" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PHYSIQUE APPLIQUEE"</span>,</span>
+<span id="cb6-174"><a href="#cb6-174" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PHYSIQUE CHIMIE"</span>,</span>
+<span id="cb6-175"><a href="#cb6-175" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SCIENCES DE LA VIE"</span>,</span>
+<span id="cb6-176"><a href="#cb6-176" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SCIENCES DE LA TERRE ET DE LA NATURE"</span>,</span>
+<span id="cb6-177"><a href="#cb6-177" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SCIENCES DE LA MATIÈRE"</span>,</span>
+<span id="cb6-178"><a href="#cb6-178" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SCIENCES NATURELLES"</span>,</span>
+<span id="cb6-179"><a href="#cb6-179" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SCIENCES PHYSIQUES"</span>,</span>
+<span id="cb6-180"><a href="#cb6-180" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SPORTS"</span>,</span>
+<span id="cb6-181"><a href="#cb6-181" aria-hidden="true" tabindex="-1"></a>    <span class="st">"STAPS"</span>,</span>
+<span id="cb6-182"><a href="#cb6-182" aria-hidden="true" tabindex="-1"></a>    <span class="st">"STATISTIQUES, PROBABILITÉS"</span>,</span>
+<span id="cb6-183"><a href="#cb6-183" aria-hidden="true" tabindex="-1"></a>    <span class="st">"TECHNOLOGIE"</span>,</span>
+<span id="cb6-184"><a href="#cb6-184" aria-hidden="true" tabindex="-1"></a>    <span class="st">"TECHNOLOGIES INDUSTRIELLES"</span>,</span>
+<span id="cb6-185"><a href="#cb6-185" aria-hidden="true" tabindex="-1"></a>    <span class="st">"TRANSPORTS, LOGISTIQUES"</span>,</span>
+<span id="cb6-186"><a href="#cb6-186" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LETTRES"</span>,</span>
+<span id="cb6-187"><a href="#cb6-187" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LETTRES CLASSIQUES"</span>,</span>
+<span id="cb6-188"><a href="#cb6-188" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LETTRES MODERNES"</span>,</span>
+<span id="cb6-189"><a href="#cb6-189" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SCIENCE DU LANGAGE"</span>,</span>
+<span id="cb6-190"><a href="#cb6-190" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SCIENCES DE L'EDUCATION"</span>,</span>
+<span id="cb6-191"><a href="#cb6-191" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PHILOSOPHIE"</span>,</span>
+<span id="cb6-192"><a href="#cb6-192" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PSYCHOLOGIE"</span>,</span>
+<span id="cb6-193"><a href="#cb6-193" aria-hidden="true" tabindex="-1"></a>    <span class="st">"DEMOGRAPHIE"</span>,</span>
+<span id="cb6-194"><a href="#cb6-194" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SOCIOLOGIE"</span>,</span>
+<span id="cb6-195"><a href="#cb6-195" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ANTHROPOLOGIE"</span>,</span>
+<span id="cb6-196"><a href="#cb6-196" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ETHNOLOGIE"</span>,</span>
+<span id="cb6-197"><a href="#cb6-197" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GEOGRAPHIE"</span>,</span>
+<span id="cb6-198"><a href="#cb6-198" aria-hidden="true" tabindex="-1"></a>    <span class="st">"HISTOIRE"</span>,</span>
+<span id="cb6-199"><a href="#cb6-199" aria-hidden="true" tabindex="-1"></a>    <span class="st">"HISTOIRE COMTEMPORAINE"</span>,</span>
+<span id="cb6-200"><a href="#cb6-200" aria-hidden="true" tabindex="-1"></a>    <span class="st">"HISTOIRE MODERNE"</span>,</span>
+<span id="cb6-201"><a href="#cb6-201" aria-hidden="true" tabindex="-1"></a>    <span class="st">"HISTOIRE MEDIEVALE"</span>,</span>
+<span id="cb6-202"><a href="#cb6-202" aria-hidden="true" tabindex="-1"></a>    <span class="st">"HISTOIRE ANCIENNE"</span>,</span>
+<span id="cb6-203"><a href="#cb6-203" aria-hidden="true" tabindex="-1"></a>    <span class="st">"HISTOIRE SOURCES"</span>,</span>
+<span id="cb6-204"><a href="#cb6-204" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PREHISTOIRE"</span>,</span>
+<span id="cb6-205"><a href="#cb6-205" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES VIVANTES ETRANGERES (LVE) - ANGLAIS"</span>,</span>
+<span id="cb6-206"><a href="#cb6-206" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES VIVANTES ETRANGERES (LVE) - ALLEMAND"</span>,</span>
+<span id="cb6-207"><a href="#cb6-207" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES VIVANTES ETRANGERES (LVE) - ESPAGNOL"</span>,</span>
+<span id="cb6-208"><a href="#cb6-208" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES VIVANTES ETRANGERES (LVE) - ITALIEN"</span>,</span>
+<span id="cb6-209"><a href="#cb6-209" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES VIVANTES ETRANGERES (LVE) - AUTRES LANGUES"</span>,</span>
+<span id="cb6-210"><a href="#cb6-210" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES VIVANTES ETRANGERES (LVE) - 2 LANGUES"</span>,</span>
+<span id="cb6-211"><a href="#cb6-211" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES, LITTÉRATURES, CIVILISATIONS ETRANGÈRES (LLCE) - ANGLAIS"</span>,</span>
+<span id="cb6-212"><a href="#cb6-212" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES, LITTÉRATURES, CIVILISATIONS ETRANGÈRES (LLCE) - ALLEMAND"</span>,</span>
+<span id="cb6-213"><a href="#cb6-213" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES, LITTÉRATURES, CIVILISATIONS ETRANGÈRES (LLCE) - ESPAGNOL"</span>,</span>
+<span id="cb6-214"><a href="#cb6-214" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES, LITTÉRATURES, CIVILISATIONS ETRANGÈRES (LLCE) - ITALIEN"</span>,</span>
+<span id="cb6-215"><a href="#cb6-215" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES, LITTÉRATURES, CIVILISATIONS ETRANGÈRES (LLCE) - AUTRE LANGUE"</span>,</span>
+<span id="cb6-216"><a href="#cb6-216" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES, LITTÉRATURES, CIVILISATIONS ETRANGÈRES (LLCE) - 2 LANGUES"</span>,</span>
+<span id="cb6-217"><a href="#cb6-217" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES ETRANGÈRES APPLIQUÉES (LEA)"</span>,</span>
+<span id="cb6-218"><a href="#cb6-218" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES ETRANGÈRES APPLIQUÉES (LEA) - ANGLAIS"</span>,</span>
+<span id="cb6-219"><a href="#cb6-219" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES ETRANGÈRES APPLIQUÉES (LEA) - ALLEMAND"</span>,</span>
+<span id="cb6-220"><a href="#cb6-220" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES ETRANGÈRES APPLIQUÉES (LEA) - ESPAGNOL"</span>,</span>
+<span id="cb6-221"><a href="#cb6-221" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES ETRANGÈRES APPLIQUÉES (LEA) - ITALIEN"</span>,</span>
+<span id="cb6-222"><a href="#cb6-222" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES ETRANGÈRES APPLIQUÉES (LEA) - AUTRE LANGUE"</span>,</span>
+<span id="cb6-223"><a href="#cb6-223" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES ETRANGÈRES APPLIQUÉES (LEA) ANGLAIS - ALLEMAND"</span>,</span>
+<span id="cb6-224"><a href="#cb6-224" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES ETRANGÈRES APPLIQUÉES (LEA) ANGLAIS - ESPAGNOL"</span>,</span>
+<span id="cb6-225"><a href="#cb6-225" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES ETRANGÈRES APPLIQUÉES (LEA) ANGLAIS - ITALIEN"</span>,</span>
+<span id="cb6-226"><a href="#cb6-226" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES ETRANGÈRES APPLIQUÉES (LEA) ANGLAIS - AUTRES LANGUES"</span>,</span>
+<span id="cb6-227"><a href="#cb6-227" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES ETRANGÈRES APPLIQUÉES (LEA) ANGLAIS - 2 LANGUES"</span>,</span>
+<span id="cb6-228"><a href="#cb6-228" aria-hidden="true" tabindex="-1"></a>    <span class="st">"LANGUES ETRANGÈRES APPLIQUÉES (LEA) 3 LANGUES"</span>,</span>
+<span id="cb6-229"><a href="#cb6-229" aria-hidden="true" tabindex="-1"></a>    <span class="st">"FRANÇAIS LANGUE ETRANGÈRE (FLE)"</span>,</span>
+<span id="cb6-230"><a href="#cb6-230" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ARTS PLASTIQUES"</span>,</span>
+<span id="cb6-231"><a href="#cb6-231" aria-hidden="true" tabindex="-1"></a>    <span class="st">"MUSIQUE"</span>,</span>
+<span id="cb6-232"><a href="#cb6-232" aria-hidden="true" tabindex="-1"></a>    <span class="st">"HISTOIRE DE L'ART"</span>,</span>
+<span id="cb6-233"><a href="#cb6-233" aria-hidden="true" tabindex="-1"></a>    <span class="st">"INFORMATION"</span>,</span>
+<span id="cb6-234"><a href="#cb6-234" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ART DU SPECTACLE ET AUDIOVISUEL"</span>,</span>
+<span id="cb6-235"><a href="#cb6-235" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ARTS APPLIQUES"</span>,</span>
+<span id="cb6-236"><a href="#cb6-236" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ART, ART ET CULTURE, CULTURE"</span>,</span>
+<span id="cb6-237"><a href="#cb6-237" aria-hidden="true" tabindex="-1"></a>    <span class="st">"TOURISME"</span>,</span>
+<span id="cb6-238"><a href="#cb6-238" aria-hidden="true" tabindex="-1"></a>    <span class="st">"URBANISME"</span>,</span>
+<span id="cb6-239"><a href="#cb6-239" aria-hidden="true" tabindex="-1"></a>    <span class="st">"AMENAGEMENT"</span>,</span>
+<span id="cb6-240"><a href="#cb6-240" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ADMINISTRATION ECONOMIQUE ET SOCIALE (AES)"</span>,</span>
+<span id="cb6-241"><a href="#cb6-241" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ADMINISTRATION ET ECHANGES INTERNATIONAUX"</span>,</span>
+<span id="cb6-242"><a href="#cb6-242" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ADMINISTRATION PUBLIQUE"</span>,</span>
+<span id="cb6-243"><a href="#cb6-243" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CARRIERES JUDICIAIRES"</span>,</span>
+<span id="cb6-244"><a href="#cb6-244" aria-hidden="true" tabindex="-1"></a>    <span class="st">"COMPTABILITE"</span>,</span>
+<span id="cb6-245"><a href="#cb6-245" aria-hidden="true" tabindex="-1"></a>    <span class="st">"DROIT &amp; LANGUES"</span>,</span>
+<span id="cb6-246"><a href="#cb6-246" aria-hidden="true" tabindex="-1"></a>    <span class="st">"DROIT &amp; SCIENCES POLITIQUES"</span>,</span>
+<span id="cb6-247"><a href="#cb6-247" aria-hidden="true" tabindex="-1"></a>    <span class="st">"DROIT DES AFFAIRES"</span>,</span>
+<span id="cb6-248"><a href="#cb6-248" aria-hidden="true" tabindex="-1"></a>    <span class="st">"DROIT INTERNATIONAL ET COMPARE"</span>,</span>
+<span id="cb6-249"><a href="#cb6-249" aria-hidden="true" tabindex="-1"></a>    <span class="st">"DROIT NOTARIAL"</span>,</span>
+<span id="cb6-250"><a href="#cb6-250" aria-hidden="true" tabindex="-1"></a>    <span class="st">"DROIT PRIVE"</span>,</span>
+<span id="cb6-251"><a href="#cb6-251" aria-hidden="true" tabindex="-1"></a>    <span class="st">"DROIT PRIVE ET PUBLIC"</span>,</span>
+<span id="cb6-252"><a href="#cb6-252" aria-hidden="true" tabindex="-1"></a>    <span class="st">"DROIT PUBLIC"</span>,</span>
+<span id="cb6-253"><a href="#cb6-253" aria-hidden="true" tabindex="-1"></a>    <span class="st">"DROIT SOCIAL"</span>,</span>
+<span id="cb6-254"><a href="#cb6-254" aria-hidden="true" tabindex="-1"></a>    <span class="st">"DROIT-ECONOMIE &amp; LANGUES (BI-DEUG)"</span>,</span>
+<span id="cb6-255"><a href="#cb6-255" aria-hidden="true" tabindex="-1"></a>    <span class="st">"DROIT"</span>,</span>
+<span id="cb6-256"><a href="#cb6-256" aria-hidden="true" tabindex="-1"></a>    <span class="st">"FINANCE"</span>,</span>
+<span id="cb6-257"><a href="#cb6-257" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GESTION"</span>,</span>
+<span id="cb6-258"><a href="#cb6-258" aria-hidden="true" tabindex="-1"></a>    <span class="st">"MANAGEMENT / MANAGEMENT &amp; GESTION / ECONOMIE &amp; MANAGEMENT"</span>,</span>
+<span id="cb6-259"><a href="#cb6-259" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ORGANISATION ET ADMINISTRATION DES ENTREPRISES"</span>,</span>
+<span id="cb6-260"><a href="#cb6-260" aria-hidden="true" tabindex="-1"></a>    <span class="st">"RELATIONS INTERNATIONALES"</span>,</span>
+<span id="cb6-261"><a href="#cb6-261" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SCIENCES ECONOMIQUES"</span>,</span>
+<span id="cb6-262"><a href="#cb6-262" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SCIENCES ECONOMIQUES ET GESTION"</span>,</span>
+<span id="cb6-263"><a href="#cb6-263" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SCIENCES POLITIQUES"</span>,</span>
+<span id="cb6-264"><a href="#cb6-264" aria-hidden="true" tabindex="-1"></a>    <span class="st">"MEDECINE"</span>,</span>
+<span id="cb6-265"><a href="#cb6-265" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PHARMACIE"</span>,</span>
+<span id="cb6-266"><a href="#cb6-266" aria-hidden="true" tabindex="-1"></a>    <span class="st">"DENTAIRE"</span>,</span>
+<span id="cb6-267"><a href="#cb6-267" aria-hidden="true" tabindex="-1"></a>    <span class="st">"KINESITHERAPEUTE"</span>,</span>
+<span id="cb6-268"><a href="#cb6-268" aria-hidden="true" tabindex="-1"></a>    <span class="st">"INFIRMIER"</span>,</span>
+<span id="cb6-269"><a href="#cb6-269" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PSYCHOMOTRICITE"</span>,</span>
+<span id="cb6-270"><a href="#cb6-270" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ORTHOPHONISTE"</span>,</span>
+<span id="cb6-271"><a href="#cb6-271" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ORTHOPTISTE"</span>,</span>
+<span id="cb6-272"><a href="#cb6-272" aria-hidden="true" tabindex="-1"></a>    <span class="st">"STAPS"</span>,</span>
+<span id="cb6-273"><a href="#cb6-273" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ECOLE VÉTÉRINAIRE"</span>,</span>
+<span id="cb6-274"><a href="#cb6-274" aria-hidden="true" tabindex="-1"></a>    <span class="st">"AUTRES FILIERES MEDICALES"</span>,</span>
+<span id="cb6-275"><a href="#cb6-275" aria-hidden="true" tabindex="-1"></a>    <span class="st">"AUTRES FILIERES PARA-MEDICALES"</span>,</span>
+<span id="cb6-276"><a href="#cb6-276" aria-hidden="true" tabindex="-1"></a>    <span class="st">"AGRICULTURE AGROALIMENTAIRE"</span>,</span>
+<span id="cb6-277"><a href="#cb6-277" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CHIMIE-GÉNIE DES PROCÉDÉS"</span>,</span>
+<span id="cb6-278"><a href="#cb6-278" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GÉNIE BIOLOGIQUE-GÉNIE MÉDICAL-SANTÉ"</span>,</span>
+<span id="cb6-279"><a href="#cb6-279" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SCIENCES DE LA TERRE"</span>,</span>
+<span id="cb6-280"><a href="#cb6-280" aria-hidden="true" tabindex="-1"></a>    <span class="st">"MATÉRIAUX"</span>,</span>
+<span id="cb6-281"><a href="#cb6-281" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GÉNIE CIVIL-BÂTIMENT-AMÉNAGEMENT-ENVIRONNEMENT"</span>,</span>
+<span id="cb6-282"><a href="#cb6-282" aria-hidden="true" tabindex="-1"></a>    <span class="st">"MÉCANIQUE-ENERGÉTIQUE"</span>,</span>
+<span id="cb6-283"><a href="#cb6-283" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ELECTRICITÉ-ELECTRONIQUE-ELECTROTECHNIQUE-AUTOMATIQUE"</span>,</span>
+<span id="cb6-284"><a href="#cb6-284" aria-hidden="true" tabindex="-1"></a>    <span class="st">"TÉLÉCOMS ET RÉSEAUX"</span>,</span>
+<span id="cb6-285"><a href="#cb6-285" aria-hidden="true" tabindex="-1"></a>    <span class="st">"INFORMATIQUE-SYSTÈMES D'INFORMATION-MATHÉMATIQUES-MODÉLISATION"</span>,</span>
+<span id="cb6-286"><a href="#cb6-286" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GÉNÉRALISTE"</span>,</span>
+<span id="cb6-287"><a href="#cb6-287" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GÉNIE ÉLECTRIQUE ET INFORMATIQUE INDUSTRIELLE"</span>,</span>
+<span id="cb6-288"><a href="#cb6-288" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GÉNIE MATHÉMATIQUE ET INFORMATIQUE"</span>,</span>
+<span id="cb6-289"><a href="#cb6-289" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GÉNIE CIVIL ET INFRASTRUCTURES"</span>,</span>
+<span id="cb6-290"><a href="#cb6-290" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GÉNIE MÉCANIQUE"</span>,</span>
+<span id="cb6-291"><a href="#cb6-291" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GÉNIE DES MATÉRIAUX"</span>,</span>
+<span id="cb6-292"><a href="#cb6-292" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GÉNIE CHIMIQUE"</span>,</span>
+<span id="cb6-293"><a href="#cb6-293" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GÉNIE DE L'ENVIRONNEMENT"</span>,</span>
+<span id="cb6-294"><a href="#cb6-294" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GÉNIE DES SYSTÈMES INDUSTRIELS"</span>,</span>
+<span id="cb6-295"><a href="#cb6-295" aria-hidden="true" tabindex="-1"></a>    <span class="st">"INGÉNIERIE DE LA SANTÉ"</span>,</span>
+<span id="cb6-296"><a href="#cb6-296" aria-hidden="true" tabindex="-1"></a>    <span class="st">"INGÉNIERIE DE L'INFORMATION ET DE LA COMMUNICATION"</span>,</span>
+<span id="cb6-297"><a href="#cb6-297" aria-hidden="true" tabindex="-1"></a>    <span class="st">"INGÉNIERIE DE LA BANQUE, DE LA FINANCE ET DE L'ASSURANCE"</span>,</span>
+<span id="cb6-298"><a href="#cb6-298" aria-hidden="true" tabindex="-1"></a>    <span class="st">"INGÉNIERIE DU TRANSPORT, DE L'HÔTELLERIE ET DU TOURISME"</span>,</span>
+<span id="cb6-299"><a href="#cb6-299" aria-hidden="true" tabindex="-1"></a>    <span class="st">"INGÉNIERIE DU MANAGEMENT"</span>,</span>
+<span id="cb6-300"><a href="#cb6-300" aria-hidden="true" tabindex="-1"></a>    <span class="st">"INGÉNIERIE DU COMMERCE ET DE LA VENTE"</span>,</span>
+<span id="cb6-301"><a href="#cb6-301" aria-hidden="true" tabindex="-1"></a>    <span class="st">"INGÉNIERIE ÉCONOMIQUE"</span>,</span>
+<span id="cb6-302"><a href="#cb6-302" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CAPEPS"</span>,</span>
+<span id="cb6-303"><a href="#cb6-303" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CAPES ECO DROIT"</span>,</span>
+<span id="cb6-304"><a href="#cb6-304" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CAPES LANGUES"</span>,</span>
+<span id="cb6-305"><a href="#cb6-305" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CAPES LETTRES, SC. LANGAGE, ARTS"</span>,</span>
+<span id="cb6-306"><a href="#cb6-306" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CAPES SCIENCES"</span>,</span>
+<span id="cb6-307"><a href="#cb6-307" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CAPES SHS"</span>,</span>
+<span id="cb6-308"><a href="#cb6-308" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CAPET CAPLP"</span>,</span>
+<span id="cb6-309"><a href="#cb6-309" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CPE"</span>,</span>
+<span id="cb6-310"><a href="#cb6-310" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CRPE"</span>,</span>
+<span id="cb6-311"><a href="#cb6-311" aria-hidden="true" tabindex="-1"></a>    <span class="st">"AUTRES SPECIALITES OU DISCIPLINES NON CITEES"</span>,</span>
+<span id="cb6-312"><a href="#cb6-312" aria-hidden="true" tabindex="-1"></a>    <span class="st">"MARKETING"</span>,</span>
+<span id="cb6-313"><a href="#cb6-313" aria-hidden="true" tabindex="-1"></a>    <span class="st">"COMMUNICATION"</span>,</span>
+<span id="cb6-314"><a href="#cb6-314" aria-hidden="true" tabindex="-1"></a>    <span class="st">"IUT - SECONDAIRE (MÉCANIQUE, RÉSEAUX ET TÉLÉCOMMUNICATION, GÉNIE INDUSTRIEL...)"</span>,</span>
+<span id="cb6-315"><a href="#cb6-315" aria-hidden="true" tabindex="-1"></a>    <span class="st">"IUT - TERTIAIRE (CARRIÈRES SOCIALES, GEA, COMMUNICATION...)"</span>,</span>
+<span id="cb6-316"><a href="#cb6-316" aria-hidden="true" tabindex="-1"></a>    <span class="st">"IUT - AUTRES"</span>,</span>
+<span id="cb6-317"><a href="#cb6-317" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CPGE - SCIENTIFIQUES"</span>,</span>
+<span id="cb6-318"><a href="#cb6-318" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CPGE - LITTÉRAIRES"</span>,</span>
+<span id="cb6-319"><a href="#cb6-319" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CPGE - COMMERCE"</span>,</span>
+<span id="cb6-320"><a href="#cb6-320" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CPGE - AUTRES"</span>,</span>
+<span id="cb6-321"><a href="#cb6-321" aria-hidden="true" tabindex="-1"></a>    <span class="st">"STS - INDUSTRIELLE"</span>,</span>
+<span id="cb6-322"><a href="#cb6-322" aria-hidden="true" tabindex="-1"></a>    <span class="st">"STS - SERVICES"</span>,</span>
+<span id="cb6-323"><a href="#cb6-323" aria-hidden="true" tabindex="-1"></a>    <span class="st">"STS- SPECIALITE DISCIPLINAIRE"</span>,</span>
+<span id="cb6-324"><a href="#cb6-324" aria-hidden="true" tabindex="-1"></a>    <span class="st">"STS - AUTRES"</span>,</span>
+<span id="cb6-325"><a href="#cb6-325" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ING - AGRICULTURE AGROALIMENTAIRE"</span>,</span>
+<span id="cb6-326"><a href="#cb6-326" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ING - CHIMIE-GÉNIE DES PROCÉDÉS"</span>,</span>
+<span id="cb6-327"><a href="#cb6-327" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ING - GÉNIE BIOLOGIQUE-GÉNIE MÉDICAL-SANTÉ"</span>,</span>
+<span id="cb6-328"><a href="#cb6-328" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ING - SCIENCES DE LA TERRE"</span>,</span>
+<span id="cb6-329"><a href="#cb6-329" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ING - MATÉRIAUX"</span>,</span>
+<span id="cb6-330"><a href="#cb6-330" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ING - GÉNIE CIVIL-BÂTIMENT-AMÉNAGEMENT-ENVIRONNEMENT"</span>,</span>
+<span id="cb6-331"><a href="#cb6-331" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ING - DOUBLE CURSUS ARCHITECTE-INGÉNIEUR"</span>,</span>
+<span id="cb6-332"><a href="#cb6-332" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ING - MÉCANIQUE-ENERGÉTIQUE"</span>,</span>
+<span id="cb6-333"><a href="#cb6-333" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ING - ELECTRICITÉ-ELECTRONIQUE-ELECTROTECHNIQUE-AUTOMATIQUE"</span>,</span>
+<span id="cb6-334"><a href="#cb6-334" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ING - TÉLÉCOMS ET RÉSEAUX"</span>,</span>
+<span id="cb6-335"><a href="#cb6-335" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ING - INFORMATIQUE-SYSTÈMES D'INFORMATION-MATHÉMATIQUES-MODÉLISATION"</span>,</span>
+<span id="cb6-336"><a href="#cb6-336" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ING - GÉNÉRALISTE (ING ?)"</span>,</span>
+<span id="cb6-337"><a href="#cb6-337" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ING - PAS DE SPÉCIALITÉ (ANNÉE COMMUNE)"</span>,</span>
+<span id="cb6-338"><a href="#cb6-338" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ING - AUTRE"</span>,</span>
+<span id="cb6-339"><a href="#cb6-339" aria-hidden="true" tabindex="-1"></a>    <span class="st">"COM - ADMINISTRATION, GESTION, COMPTABILITÉ"</span>,</span>
+<span id="cb6-340"><a href="#cb6-340" aria-hidden="true" tabindex="-1"></a>    <span class="st">"COM - FINANCE, BANQUE, ASSURANCE, AFFAIRES"</span>,</span>
+<span id="cb6-341"><a href="#cb6-341" aria-hidden="true" tabindex="-1"></a>    <span class="st">"COM - MARKETING"</span>,</span>
+<span id="cb6-342"><a href="#cb6-342" aria-hidden="true" tabindex="-1"></a>    <span class="st">"COM - COMMERCE, VENTE"</span>,</span>
+<span id="cb6-343"><a href="#cb6-343" aria-hidden="true" tabindex="-1"></a>    <span class="st">"COM - COMMERCE INTERNATIONAL"</span>,</span>
+<span id="cb6-344"><a href="#cb6-344" aria-hidden="true" tabindex="-1"></a>    <span class="st">"COM - ETUDES, CONSEIL"</span>,</span>
+<span id="cb6-345"><a href="#cb6-345" aria-hidden="true" tabindex="-1"></a>    <span class="st">"COM - AUDIT"</span>,</span>
+<span id="cb6-346"><a href="#cb6-346" aria-hidden="true" tabindex="-1"></a>    <span class="st">"COM - RESSOURCES HUMAINES"</span>,</span>
+<span id="cb6-347"><a href="#cb6-347" aria-hidden="true" tabindex="-1"></a>    <span class="st">"COM - MANAGEMENT"</span>,</span>
+<span id="cb6-348"><a href="#cb6-348" aria-hidden="true" tabindex="-1"></a>    <span class="st">"COM - APPROVISIONNEMENT, LOGISTIQUE"</span>,</span>
+<span id="cb6-349"><a href="#cb6-349" aria-hidden="true" tabindex="-1"></a>    <span class="st">"COM - TOURISME"</span>,</span>
+<span id="cb6-350"><a href="#cb6-350" aria-hidden="true" tabindex="-1"></a>    <span class="st">"COM - COMMUNICATION"</span>,</span>
+<span id="cb6-351"><a href="#cb6-351" aria-hidden="true" tabindex="-1"></a>    <span class="st">"COM - GÉNÉRALISTE"</span>,</span>
+<span id="cb6-352"><a href="#cb6-352" aria-hidden="true" tabindex="-1"></a>    <span class="st">"COM - AUTRES"</span>,</span>
+<span id="cb6-353"><a href="#cb6-353" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ART - ARTS, COMMUNICATION, DESIGN"</span>,</span>
+<span id="cb6-354"><a href="#cb6-354" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ART - ARCHITECTURE"</span>,</span>
+<span id="cb6-355"><a href="#cb6-355" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ART - MUSIQUE, DANSE, ART DRAMATIQUE…"</span>,</span>
+<span id="cb6-356"><a href="#cb6-356" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ART - PATRIMOINE"</span>,</span>
+<span id="cb6-357"><a href="#cb6-357" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ART - ENSEIGNANTS DE DANSE ET DE MUSIQUE"</span>,</span>
+<span id="cb6-358"><a href="#cb6-358" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ART - CINEMA ET AUDIOVISUEL"</span></span>
+<span id="cb6-359"><a href="#cb6-359" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb6-360"><a href="#cb6-360" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-361"><a href="#cb6-361" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-362"><a href="#cb6-362" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>activite_rem1 <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>activite_rem1, </span>
+<span id="cb6-363"><a href="#cb6-363" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb6-364"><a href="#cb6-364" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"N'a pas eu d'activité rémunérée"</span>, <span class="st">"A eu un activité rémunérée"</span>))</span>
+<span id="cb6-365"><a href="#cb6-365" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-366"><a href="#cb6-366" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>ETUDE_PERE <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>ETUDE_PERE, </span>
+<span id="cb6-367"><a href="#cb6-367" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>),</span>
+<span id="cb6-368"><a href="#cb6-368" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Fin d'études primaires ou avant"</span>, <span class="st">"Etudes secondaires niveau BEPC"</span>, <span class="st">"Etudes techniques niveau CAP/BEP"</span>, <span class="st">"Etudes secondaires niveau baccalauréat"</span>, <span class="st">"Etudes professionnelles post-baccalauréat"</span>, <span class="st">"Etudes de l'enseignement supérieur"</span>))</span>
+<span id="cb6-369"><a href="#cb6-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-370"><a href="#cb6-370" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>ETUDE_MERE <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>ETUDE_MERE, </span>
+<span id="cb6-371"><a href="#cb6-371" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>),</span>
+<span id="cb6-372"><a href="#cb6-372" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Fin d'études primaires ou avant"</span>, <span class="st">"Etudes secondaires niveau BEPC"</span>, <span class="st">"Etudes techniques niveau CAP/BEP"</span>, <span class="st">"Etudes secondaires niveau baccalauréat"</span>, <span class="st">"Etudes professionnelles post-baccalauréat"</span>, <span class="st">"Etudes de l'enseignement supérieur"</span>))</span>
+<span id="cb6-373"><a href="#cb6-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-374"><a href="#cb6-374" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>pcs_menage <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>pcs_menage, </span>
+<span id="cb6-375"><a href="#cb6-375" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>),</span>
+<span id="cb6-376"><a href="#cb6-376" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Ménages à dominante cadre"</span>, <span class="st">"Ménages à dominante intermédiaire"</span>, <span class="st">"Ménages à dominante employée"</span>, <span class="st">"Ménages à dominante indépendante"</span>, <span class="st">"Ménages à dominante ouvrière"</span>, <span class="st">"Ménages d'un employé ou ouvrier"</span>, <span class="st">"Ménages d'inactifs"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(tercdv,<span class="dv">5</span>), <span class="at">format =</span> <span class="st">"html"</span>, <span class="at">caption =</span> <span class="st">"Aperçu : les 5 premiers individus de notre base de données"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Aperçu : les 5 premiers individus de notre base de données</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">identifiant</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">poids</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">sexe_HF</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">age</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">AGE_TRANCHES</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Nais_etu_annee</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">cycle_etud1</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">discipline</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">activite_rem1</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">ETUDE_PERE</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">ETUDE_MERE</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">pcs_menage</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Date_bac2</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">B2_2</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">E19_2</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">E22_2a</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">E22_2b</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">E22_2c</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">E22_2d</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">E22_2e</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">E23</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">E14</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">E5_1</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">E7</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">E17_2</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">E17_3</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">E17_4</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">E16_1</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">E16_2</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">E16_3</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">E16_4</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">E16_5</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">E16_6</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">D62_2</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">E3</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">ville_etab</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">ci_etab</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">C22</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">taille_ville_etab_Ant1</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">taille_ville_etab_Ant2</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">taille_ville_etab_Ant3</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">taille_ville_etab_Ant4</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">taille_ville_etab_preminscr</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">densite_log_etu</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">densite_lieu_bac</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">densite_log_mere</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">densite_log_pere</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">C35</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">D5</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">D4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">T000008</td>
+<td style="text-align: right;">0.7885590</td>
+<td style="text-align: left;">Un homme</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: left;">Plus de 26 ans</td>
+<td style="text-align: right;">1993</td>
+<td style="text-align: left;">Cycle 3</td>
+<td style="text-align: left;">ING - MATÉRIAUX</td>
+<td style="text-align: left;">N'a pas eu d'activité rémunérée</td>
+<td style="text-align: left;">Etudes de l'enseignement supérieur</td>
+<td style="text-align: left;">Etudes secondaires niveau BEPC</td>
+<td style="text-align: left;">Ménages à dominante intermédiaire</td>
+<td style="text-align: right;">2012</td>
+<td style="text-align: right;">2012</td>
+<td style="text-align: left;">Non</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">Je ne fume pas</td>
+<td style="text-align: left;">Moins souvent</td>
+<td style="text-align: left;">Jamais</td>
+<td style="text-align: left;">Quelques fois</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">Quelques fois</td>
+<td style="text-align: left;">Souvent</td>
+<td style="text-align: left;">Souvent</td>
+<td style="text-align: left;">Jamais</td>
+<td style="text-align: left;">Souvent</td>
+<td style="text-align: left;">Souvent</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Très bon</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">57757</td>
+<td style="text-align: left;">Dans un logement indépendant</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Etranger</td>
+<td style="text-align: left;">Urbaine très dense</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Satisfait(e)</td>
+<td style="text-align: left;">Non, je n'en ai pas demandé / je ne suis pas éligible</td>
+<td style="text-align: left;">Très importantes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">T000010</td>
+<td style="text-align: right;">2.6209794</td>
+<td style="text-align: left;">Une femme</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: left;">23 ans</td>
+<td style="text-align: right;">1999</td>
+<td style="text-align: left;">Cycle 2</td>
+<td style="text-align: left;">COM - AUDIT</td>
+<td style="text-align: left;">A eu un activité rémunérée</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Ménages d'inactifs</td>
+<td style="text-align: right;">2017</td>
+<td style="text-align: right;">2017</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">Je ne fume pas</td>
+<td style="text-align: left;">Je ne fume pas</td>
+<td style="text-align: left;">Jamais</td>
+<td style="text-align: left;">Jamais</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">Souvent</td>
+<td style="text-align: left;">Quelques fois</td>
+<td style="text-align: left;">Rarement</td>
+<td style="text-align: left;">Rarement</td>
+<td style="text-align: left;">Quelques fois</td>
+<td style="text-align: left;">En permanence</td>
+<td style="text-align: left;">Oui</td>
+<td style="text-align: left;">Bon</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">64445</td>
+<td style="text-align: left;">Autre situation</td>
+<td style="text-align: left;">Communes de moins de 100 000 habitants</td>
+<td style="text-align: left;">Communes de moins de 100 000 habitants</td>
+<td style="text-align: left;">Etranger</td>
+<td style="text-align: left;">Etranger</td>
+<td style="text-align: left;">Etranger</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Tout à fait satisfait(e)</td>
+<td style="text-align: left;">Non, je n'en ai pas demandé / je ne suis pas éligible</td>
+<td style="text-align: left;">Importantes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">T000018</td>
+<td style="text-align: right;">1.6740214</td>
+<td style="text-align: left;">Une femme</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: left;">22 ans</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: left;">Cycle 1, hors 1ère inscription</td>
+<td style="text-align: left;">COM - COMMERCE INTERNATIONAL</td>
+<td style="text-align: left;">N'a pas eu d'activité rémunérée</td>
+<td style="text-align: left;">Etudes de l'enseignement supérieur</td>
+<td style="text-align: left;">Etudes de l'enseignement supérieur</td>
+<td style="text-align: left;">Ménages à dominante intermédiaire</td>
+<td style="text-align: right;">2018</td>
+<td style="text-align: right;">2019</td>
+<td style="text-align: left;">Oui</td>
+<td style="text-align: left;">Non</td>
+<td style="text-align: left;">Oui</td>
+<td style="text-align: left;">Non</td>
+<td style="text-align: left;">Oui</td>
+<td style="text-align: left;">Non</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">Je ne fume pas</td>
+<td style="text-align: left;">Je ne fume pas</td>
+<td style="text-align: left;">Quelques fois</td>
+<td style="text-align: left;">Quelques fois</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Quelques fois</td>
+<td style="text-align: left;">Rarement</td>
+<td style="text-align: left;">Quelques fois</td>
+<td style="text-align: left;">En permanence</td>
+<td style="text-align: left;">Jamais</td>
+<td style="text-align: left;">En permanence</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Bon</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">29232</td>
+<td style="text-align: left;">Chez ma mère ou tutrice</td>
+<td style="text-align: left;">Communes de 100 000 à 200 000 habitants</td>
+<td style="text-align: left;">Communes de 100 000 à 200 000 habitants</td>
+<td style="text-align: left;">Communes de 100 000 à 200 000 habitants</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Urbaine dense</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Urbaine dense</td>
+<td style="text-align: left;">Urbaine périphérique peu dense</td>
+<td style="text-align: left;">Neutre</td>
+<td style="text-align: left;">Non, je n'en ai pas demandé / je ne suis pas éligible</td>
+<td style="text-align: left;">Très importantes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">T000020</td>
+<td style="text-align: right;">2.7138768</td>
+<td style="text-align: left;">Une femme</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: left;">20 ans</td>
+<td style="text-align: right;">2002</td>
+<td style="text-align: left;">Cycle 1, hors 1ère inscription</td>
+<td style="text-align: left;">COM - COMMERCE INTERNATIONAL</td>
+<td style="text-align: left;">A eu un activité rémunérée</td>
+<td style="text-align: left;">Etudes secondaires niveau baccalauréat</td>
+<td style="text-align: left;">Etudes professionnelles post-baccalauréat</td>
+<td style="text-align: left;">Ménages à dominante indépendante</td>
+<td style="text-align: right;">2020</td>
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">Non</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">Je ne fume pas</td>
+<td style="text-align: left;">Au moins une fois par semaine</td>
+<td style="text-align: left;">Rarement</td>
+<td style="text-align: left;">Rarement</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">Quelques fois</td>
+<td style="text-align: left;">Quelques fois</td>
+<td style="text-align: left;">Souvent</td>
+<td style="text-align: left;">Rarement</td>
+<td style="text-align: left;">Souvent</td>
+<td style="text-align: left;">Quelques fois</td>
+<td style="text-align: left;">Non</td>
+<td style="text-align: left;">Bon</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">29232</td>
+<td style="text-align: left;">Dans un logement indépendant</td>
+<td style="text-align: left;">Communes de moins de 100 000 habitants</td>
+<td style="text-align: left;">Communes de 100 000 à 200 000 habitants</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Urbaine dense</td>
+<td style="text-align: left;">Urbaine très dense</td>
+<td style="text-align: left;">Urbaine très dense</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Satisfait(e)</td>
+<td style="text-align: left;">Non, elle m'a été supprimée ou refusée</td>
+<td style="text-align: left;">Moyennement importantes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">T000030</td>
+<td style="text-align: right;">0.6325765</td>
+<td style="text-align: left;">Un homme</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: left;">22 ans</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: left;">Cycle 1, hors 1ère inscription</td>
+<td style="text-align: left;">IUT - TERTIAIRE (CARRIÈRES SOCIALES, GEA, COMMUNICATION...)</td>
+<td style="text-align: left;">A eu un activité rémunérée</td>
+<td style="text-align: left;">Etudes techniques niveau CAP/BEP</td>
+<td style="text-align: left;">Etudes secondaires niveau baccalauréat</td>
+<td style="text-align: left;">Ménages à dominante indépendante</td>
+<td style="text-align: right;">2020</td>
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">Non</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">Je ne fume pas</td>
+<td style="text-align: left;">Moins souvent</td>
+<td style="text-align: left;">Rarement</td>
+<td style="text-align: left;">Quelques fois</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Quelques fois</td>
+<td style="text-align: left;">Rarement</td>
+<td style="text-align: left;">Rarement</td>
+<td style="text-align: left;">Quelques fois</td>
+<td style="text-align: left;">Quelques fois</td>
+<td style="text-align: left;">Quelques fois</td>
+<td style="text-align: left;">Non</td>
+<td style="text-align: left;">Bon</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">04070</td>
+<td style="text-align: left;">Dans un logement indépendant</td>
+<td style="text-align: left;">Communes de moins de 100 000 habitants</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Urbaine très dense</td>
+<td style="text-align: left;">Rurale périphérique très peu dense</td>
+<td style="text-align: left;">Rurale périphérique peu dense</td>
+<td style="text-align: left;">Rurale périphérique peu dense</td>
+<td style="text-align: left;">Neutre</td>
+<td style="text-align: left;">Non, je n'en ai pas demandé / je ne suis pas éligible</td>
+<td style="text-align: left;">Très importantes</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </section>
 </section>
 </section>
