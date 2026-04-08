@@ -109,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/Tom MASSOUBRE/OneDrive/Bureau/Master MASSPOP/Semestre 2/TER/Données/lil-1727-Donnees_CSV"</span>)</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>cdv <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"cdv2023.csv"</span>, <span class="at">sep =</span> <span class="st">";"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>cdv <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"cdv2023.csv"</span>, <span class="at">sep =</span> <span class="st">";"</span>, <span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">dec =</span> <span class="st">"."</span>, <span class="at">quote =</span> <span class="st">""</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="cell">
@@ -160,23 +160,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><p><strong>Les troubles psychiques</strong> definie par l’OMS comme étant un état durable durant lequel un individu connait une altération majeure des grandes capacités de l’être humain, comme la pensée, la mémoire, l’attention, la régulation des émotions ou du comportement entrainant généralement un sentiment de détresse ou des déficiences fonctionnelles plus ou moins sévères ou handicapantes dans la vie quotidienne.</p>
 <p>Ils comprennent les troubles anxieux, les dépressions, les troubles bipolaires, les stress post-traumatique, la schizophrénie, les troubles de l’alimentation, les troubles de la personnalité et les troubles neurodeveloppementaux <em>[<a href="https://www.who.int/fr/news-room/fact-sheets/detail/mental-disorders">Organisation mondiale de la Santé (2025), “Les troubles mentaux”</a>].</em></p></li>
-<li><p><strong>L’exode rural</strong> définit toute migration d’une zone rurale vers une zone urbaine motivée par la recherche d’un travail ou d’une formation.</p></li>
-</ul>
-<p>Nous considérerons tout au long de notre étude :</p>
+<li><p><strong>L’exode rural</strong> désigne les migrations des populations rurales vers les villes motivées par la recherche d’un travail, d’une formation ou de meilleures conditions de vie <em>[<a href="https://ehne.fr/fr/eduscol/premiere-generale/la-france-dans-l%27europe-des-nationalites-politique-et-societe-1848-1871/l%27industrialisation-et-l%27acceleration-des-transformations-economiques-et-sociales-en-france/exode-rural-en-france-19e-20e-siecles-l%27">Paul-André Rosental (2024), « L’exode rural en France (19e-20e siècles) », Encyclopédie d’histoire numérique de l’Europe</a>].</em></p></li>
+<li><p><strong>Zone rurale</strong> / <strong>Zone urbaine</strong></p>
+<p>Les territoires sont définit selon la grille communale de densité (définit par l’INSEE depuis 2020).</p>
+<p><em>«&nbsp;La grille communale de densité s’appuie sur une méthodologie européenne pour caractériser les communes en fonction de la répartition de la population sur leur territoire. Plus la population est concentrée et nombreuse, plus la commune est considérée comme dense. En effet, l’appartenance à un niveau de la grille n’est pas liée à la densité moyenne de population calculée sur l’ensemble de la commune (incluant les surfaces non habitées comme les forêts, la montagne et les champs)&nbsp;; la définition retenue par l’Union européenne prend en compte l’importance au sein de la commune de zones concentrant un grand nombre d’habitants sur une faible surface. La grille européenne définit trois niveaux de densité&nbsp;: les communes densément peuplées, les communes de densité intermédiaire et les communes rurales. Pour affiner la description des territoires les moins denses, l’Insee a ajouté, au sein des communes rurales, la distinction entre les communes peu denses et très peu denses.</em></p>
+<p><em>La grille communale s’appuie sur une grille de carreaux de 1 km², dans lesquels la population est calculée à partir des données géolocalisées issues, en France, des fichiers démographiques sur les logements et les individus (Fideli 2018), base de données issue principalement des fichiers fiscaux liés à la taxe d’habitation. La grille française est construite de façon continue avec la grille de carreaux européens fournie par Eurostat. La population des carreaux des communes étrangères frontalières est donc prise en compte dans la construction de la grille française.</em></p>
+<p><em>Dans un premier temps, des ensembles de carreaux denses contigus sont constitués. Suivant la typologie européenne, on définit les «&nbsp;centres urbains&nbsp;» comme des agrégats de carreaux contigus de plus de 1&nbsp;500 habitants/km², tels que plus de 50&nbsp;000 habitants vivent dans cet agrégat. Les «&nbsp;clusters urbains&nbsp;» regroupent des carreaux contigus de plus de 300 habitants/km² tels que plus de 5 000 habitants vivent dans le cluster. Pour affiner la description des territoires les moins denses, l’Insee a ajouté un niveau à la typologie européenne, en définissant les «&nbsp;mailles rurales intermédiaires&nbsp;» comme des regroupements de carreaux contigus de plus de 25 habitants/km², comptant au minimum 300 habitants dans le regroupement.</em></p>
+<p><em>Dans un deuxième temps, pour chaque commune, on considère la part des habitants qui vivent dans les agrégats de carreaux définis précédemment.</em></p>
 <ul>
-<li><p><strong>Zone rurale</strong> ?</p></li>
-<li><p><strong>Zone urbaine</strong> ?</p></li>
+<li><p><em>Si plus de 50&nbsp;% des habitants vit dans un centre urbain, la commune est considérée comme «&nbsp;densément peuplée&nbsp;».</em></p></li>
+<li><p><em>Parmi les autres communes, si plus de 50&nbsp;% vit dans un centre urbain ou un cluster urbain, la commune est «&nbsp;de densité intermédiaire&nbsp;».</em></p></li>
+<li><p><em>À l’inverse, les communes où plus de 50&nbsp;% de la population vit hors de toute maille sont «&nbsp;très peu denses&nbsp;».</em></p></li>
+<li><p><em>Enfin, les autres communes sont «&nbsp;peu denses&nbsp;».</em></p></li>
+</ul>
+<p>un gradient de ruralité</p>
+<p>l’accès aux services</p>
+<p>grille de densité</p>
+<p>88% des communes françaises sont ainsi classé dans une zone rurale et 33% des français y résident.</p>
+<p>“Rurale éloignée très peu dense”,</p>
+<p>“Rurale éloignée peu dense”,</p>
+<p>“Rurale périphérique très peu dense”,</p>
+<p>“Rurale périphérique peu dense”,</p>
+<p>“Urbaine - Bourg”,</p>
+<p>“Urbaine - Petite ville”,</p>
+<p>“Urbaine périphérique peu dense”,</p>
+<p>“Urbaine dense”,</p>
+<p>“Urbaine très dense”</p>
+<p><img src="images/image.jfif" class="img-fluid"></p></li>
 </ul>
 <p><img src="images/clipboard-1453216090.png" class="img-fluid" width="20"></p>
+<p><img src="images/Capture.PNG" class="img-fluid"></p>
+<p><a href="https://www.education.gouv.fr/sites/default/files/2025-04/la-d-finition-de-la-ruralit-par-l-insee-et-les-volutions-de-la-typologie-des-communes-rurales-et-urbaines-de-la-depp-pdf-avril-2025--439881.pdf">blabla pdf</a></p>
 </section>
 <section id="problématique-et-hypothèses" class="level3">
 <h3 class="anchored" data-anchor-id="problématique-et-hypothèses"><span class="smallcaps">Problématique et hypothèses :</span></h3>
 <p>Dans quelle mesure la rupture géographique et sociale vécues par les jeunes issus des territoires ruraux lors de leurs entrée dans l’enseignement supérieur conduit-elle au développement de trouble de la santé mentale ?</p>
 <p>Nous pouvons alors définir trois hypothèses :</p>
 <ul>
-<li><p>H1 : Les étudiants contraints à l’éxode rurale sont davantage sujets aux troubles de la santé mentale.</p></li>
-<li><p>H2 : Plus l’écart sociauculturel entre le milieu rural et le milieu universitaire est important, plus la probabilité de développer des troubles de la santé mental augmente.</p></li>
+<li><p>H1 : Les étudiants vivant un éxode rural sont davantage sujets aux troubles de la santé mentale.</p></li>
+<li><p>H2 : Plus l’écart (socio-culturel) entre le milieu rural et le milieu universitaire est important, plus la probabilité de développer des troubles de la santé mentale augmente.</p></li>
 </ul>
+<p>Comment on fait pour savoir l’ecart socio-culturel entre les deux milieu ??</p>
 <p><img src="images/clipboard-1453216090.png" class="img-fluid" width="20"></p>
 </section>
 <section id="sélection-des-variables---cdvi" class="level3">
@@ -563,11 +587,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-376"><a href="#cb6-376" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Ménages à dominante cadre"</span>, <span class="st">"Ménages à dominante intermédiaire"</span>, <span class="st">"Ménages à dominante employée"</span>, <span class="st">"Ménages à dominante indépendante"</span>, <span class="st">"Ménages à dominante ouvrière"</span>, <span class="st">"Ménages d'un employé ou ouvrier"</span>, <span class="st">"Ménages d'inactifs"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
+<p>On veut trouver : Comment on sait si il y a eu un exode rural ?</p>
+<p>On doit créer une variable exode rurale OUI ou NON ? Mais comment savoir ?</p>
+<p>La taille des villes ne peut pas vraiment nous aider car on ne sait pas distinguer rurale et urbain (moins de 100 000 habitants).</p>
+<p>On peut distinguer rurale et urbain grace à la variable “densité lieu….”</p>
+<p>On a densité logement étudiant / densité lieu du bac / densite logement de la mere / densite logement du pere.<br>
+<br>
+</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(tercdv<span class="sc">$</span>taille_ville_etab_Ant1)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+                               Etranger                                   Paris 
+                                    514                                    3752 
+    Région parisienne : Petite Couronne     Région parisienne : Grande Couronne 
+                                   1787                                    1826 
+  Communes de plus de 300 000 habitants Communes de 200 001 à 300 000 habitants 
+                                   4184                                    3665 
+Communes de 100 000 à 200 000 habitants  Communes de moins de 100 000 habitants 
+                                   9763                                    9655 </code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(tercdv<span class="sc">$</span>densite_lieu_bac)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Rurale éloignée très peu dense          Rurale éloignée peu dense 
+                                 8                                 94 
+Rurale périphérique très peu dense      Rurale périphérique peu dense 
+                                 7                                198 
+                   Urbaine - Bourg             Urbaine - Petite ville 
+                              1538                               3473 
+    Urbaine périphérique peu dense                      Urbaine dense 
+                               539                              15314 
+                Urbaine très dense 
+                             23907 </code></pre>
+</div>
+</div>
 <p>Aperçu de notre base de données d’analyse - les modalités du premier individu :</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(tercdv,<span class="dv">1</span>), <span class="at">format =</span> <span class="st">"html"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(tercdv,<span class="dv">1</span>), <span class="at">format =</span> <span class="st">"html"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -689,58 +754,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>pct_malade <span class="ot">&lt;-</span> <span class="fu">prop.table</span>(<span class="fu">table</span>(tercdv<span class="sc">$</span>E19_2))<span class="sc">*</span><span class="dv">100</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>bp <span class="ot">=</span> <span class="fu">barplot</span>(pct_malade,</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"#A9AF35"</span>, <span class="st">"#AF7935"</span>),</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Pourcentage"</span>,</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Proportion d'étudiants concernés par un trouble psychique"</span>,</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fu">max</span>(pct_malade) <span class="sc">*</span> <span class="fl">1.2</span>),    </span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">border =</span> <span class="cn">NA</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> bp,</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> pct_malade,</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="fu">paste0</span>(<span class="fu">round</span>(pct_malade, <span class="dv">1</span>), <span class="st">"%"</span>),</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">pos =</span> <span class="dv">3</span>,</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">cex =</span> <span class="fl">0.8</span></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="TER_cdv2023_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>densite_cat <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">grepl</span>(<span class="st">"Rurale"</span>, tercdv<span class="sc">$</span>densite_log_mere),</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"Rurale"</span>, <span class="st">"Urbaine"</span>)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>densite_cat <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>densite_cat,</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>                           <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Rurale"</span>, <span class="st">"Urbaine"</span>))</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>pct_densite <span class="ot">&lt;-</span> <span class="fu">prop.table</span>(<span class="fu">table</span>(tercdv<span class="sc">$</span>densite_cat)) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>bp <span class="ot">&lt;-</span> <span class="fu">barplot</span>(pct_densite,</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"#D1DC8B"</span>, <span class="st">"#968BDC"</span>),</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Pourcentage"</span>,</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Répartition des logements des parents selon le type de territoire"</span>,</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fu">max</span>(pct_densite) <span class="sc">*</span> <span class="fl">1.2</span>),</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">border =</span> <span class="cn">NA</span></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(</span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> bp,</span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> pct_densite,</span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="fu">paste0</span>(<span class="fu">round</span>(pct_densite, <span class="dv">1</span>), <span class="st">"%"</span>),</span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">pos =</span> <span class="dv">3</span>,</span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">cex =</span> <span class="fl">0.8</span></span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>pct_malade <span class="ot">&lt;-</span> <span class="fu">prop.table</span>(<span class="fu">table</span>(tercdv<span class="sc">$</span>E19_2))<span class="sc">*</span><span class="dv">100</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>bp <span class="ot">=</span> <span class="fu">barplot</span>(pct_malade,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"#A9AF35"</span>, <span class="st">"#AF7935"</span>),</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Pourcentage"</span>,</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Proportion d'étudiants concernés par un trouble psychique"</span>,</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fu">max</span>(pct_malade) <span class="sc">*</span> <span class="fl">1.2</span>),    </span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">border =</span> <span class="cn">NA</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> bp,</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> pct_malade,</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="fu">paste0</span>(<span class="fu">round</span>(pct_malade, <span class="dv">1</span>), <span class="st">"%"</span>),</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">pos =</span> <span class="dv">3</span>,</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">cex =</span> <span class="fl">0.8</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -750,32 +780,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<p>Préciser que il y a une censure personnelle (comme c’est envoyé sur les boite etudiant tout le monde ne dis pas) / ca ne correspond pas aux stats nationale</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>densite_cat <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">grepl</span>(<span class="st">"Rurale"</span>, tercdv<span class="sc">$</span>densite_log_etu),</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"Rurale"</span>, <span class="st">"Urbaine"</span>)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>densite_cat <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>densite_cat,</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>                           <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Rurale"</span>, <span class="st">"Urbaine"</span>))</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>pct_densite <span class="ot">&lt;-</span> <span class="fu">prop.table</span>(<span class="fu">table</span>(tercdv<span class="sc">$</span>densite_cat)) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>bp <span class="ot">&lt;-</span> <span class="fu">barplot</span>(pct_densite,</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"#D1DC8B"</span>, <span class="st">"#968BDC"</span>),</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Pourcentage"</span>,</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Répartition des logements étudiant selon le type de territoire"</span>,</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fu">max</span>(pct_densite) <span class="sc">*</span> <span class="fl">1.2</span>),</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">border =</span> <span class="cn">NA</span></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> bp,</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> pct_densite,</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="fu">paste0</span>(<span class="fu">round</span>(pct_densite, <span class="dv">1</span>), <span class="st">"%"</span>),</span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">pos =</span> <span class="dv">3</span>,</span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">cex =</span> <span class="fl">0.8</span></span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>densite_cat <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">grepl</span>(<span class="st">"Rurale"</span>, tercdv<span class="sc">$</span>densite_log_mere),</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"Rurale"</span>, <span class="st">"Urbaine"</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>densite_cat <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>densite_cat,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>                           <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Rurale"</span>, <span class="st">"Urbaine"</span>))</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>pct_densite <span class="ot">&lt;-</span> <span class="fu">prop.table</span>(<span class="fu">table</span>(tercdv<span class="sc">$</span>densite_cat)) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>bp <span class="ot">&lt;-</span> <span class="fu">barplot</span>(pct_densite,</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"#D1DC8B"</span>, <span class="st">"#968BDC"</span>),</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Pourcentage"</span>,</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Répartition des logements des parents selon le type de territoire"</span>,</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fu">max</span>(pct_densite) <span class="sc">*</span> <span class="fl">1.2</span>),</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">border =</span> <span class="cn">NA</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> bp,</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> pct_densite,</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="fu">paste0</span>(<span class="fu">round</span>(pct_densite, <span class="dv">1</span>), <span class="st">"%"</span>),</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">pos =</span> <span class="dv">3</span>,</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">cex =</span> <span class="fl">0.8</span></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -785,6 +816,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>densite_cat <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">grepl</span>(<span class="st">"Rurale"</span>, tercdv<span class="sc">$</span>densite_log_etu),</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"Rurale"</span>, <span class="st">"Urbaine"</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>tercdv<span class="sc">$</span>densite_cat <span class="ot">&lt;-</span> <span class="fu">factor</span>(tercdv<span class="sc">$</span>densite_cat,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>                           <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Rurale"</span>, <span class="st">"Urbaine"</span>))</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>pct_densite <span class="ot">&lt;-</span> <span class="fu">prop.table</span>(<span class="fu">table</span>(tercdv<span class="sc">$</span>densite_cat)) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>bp <span class="ot">&lt;-</span> <span class="fu">barplot</span>(pct_densite,</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"#D1DC8B"</span>, <span class="st">"#968BDC"</span>),</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Pourcentage"</span>,</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Répartition des logements étudiant selon le type de territoire"</span>,</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fu">max</span>(pct_densite) <span class="sc">*</span> <span class="fl">1.2</span>),</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">border =</span> <span class="cn">NA</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> bp,</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> pct_densite,</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="fu">paste0</span>(<span class="fu">round</span>(pct_densite, <span class="dv">1</span>), <span class="st">"%"</span>),</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">pos =</span> <span class="dv">3</span>,</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">cex =</span> <span class="fl">0.8</span></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TER_cdv2023_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>ANALYSE TRI CROISE exode oui non VS trouble psy? trouble psy VS note taille de la ville VS trouble psy densite des villes VS trouble psy?</p>
+<p>trouble anxieux ? depressif ? Comparaison entre les differents troubles ?</p>
+<p>ANALYSE MULTIPLE note ?? solitude dû à l’exode rural donc mauvaise santé mentale donc mauvaise note</p>
 </section>
 </section>
 </section>
